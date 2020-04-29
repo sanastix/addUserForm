@@ -29,8 +29,8 @@ public class UserApi {
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/add")
-    public Response addUser(@FormParam("name") String name, @FormParam("age") int age) {
-        UserDao.getInstance().addUser(new User(name, age));
+    public Response addUser(@FormParam("firstName") String firstName, @FormParam("lastName") String lastName, @FormParam("age") int age) {
+        UserDao.getInstance().addUser(new User(firstName, lastName, age));
         return Response
                 .status(Response.Status.OK)
                 .entity("User added")

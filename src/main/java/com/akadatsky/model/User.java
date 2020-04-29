@@ -2,19 +2,25 @@ package com.akadatsky.model;
 
 public class User {
 
-    private String name;
+    private String firstName;
+    private String lastName;
     private int age;
 
     public User() {
     }
 
-    public User(String name, int age) {
-        this.name = name;
+    public User(String firstName, String lastName, int age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.age = age;
     }
 
-    public String getName() {
-        return name;
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
     }
 
     public int getAge() {
@@ -24,8 +30,10 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "name='" + name + '\'' +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
                 ", age=" + age +
                 '}';
     }
+
 }
